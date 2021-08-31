@@ -1,0 +1,22 @@
+schema{
+    query: Query
+    mutation: Mutation
+}
+
+type Query{
+    getAllPerson : [Person]
+    findPerson(email: String) : Person
+    persons(count: Int):[Person]
+}
+
+type Mutation {
+    createPerson(name: String, mobile: String, email: String, address: [String]): Person
+}
+
+type Person{
+    id: String
+    name: String
+    mobile: String
+    email: String
+    address: [String]
+}
